@@ -8,7 +8,7 @@
 
 /* Navbar */
 header {
-  background: #1a1a1a;
+  background: white;
   color: white;
   padding: 15px 40px;
   display: flex;
@@ -26,12 +26,12 @@ header .logo {
 header nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #00008b;
+  color: black;
   font-weight: 500;
 }
 
 header nav a.btn {
-  background: #ff6600;
+  background: white;
   padding: 8px 15px;
   border-radius: 5px;
 }
