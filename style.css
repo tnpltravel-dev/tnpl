@@ -39,7 +39,7 @@ header nav a.btn {
 /* Hero section */
 .hero {
   background: url('beach.jpg') center/cover no-repeat;
-  color: white;
+  color: black;
   text-align: center;
   padding: 120px 20px;
 }
