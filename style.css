@@ -1,0 +1,143 @@
+/* Reset some basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+header {
+  background: #1a1a1a;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+header nav a.btn {
+  background: #ff6600;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* Hero section */
+.hero {
+  background: url('beach.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-large {
+  background: #ff6600;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Steps section */
+.steps {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.steps h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.step span {
+  display: block;
+  font-size: 30px;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+/* Deals section */
+.deals {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.deal-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.card .btn {
+  background: #ff6600;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  color: white;
+  margin-top: 40px;
+}
