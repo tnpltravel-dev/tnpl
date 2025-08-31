@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TNPL Travel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">🌍 TNPL TRAVEL</div>
+    <nav>
+      <a href="#destinations">Destinations</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#plan" class="btn">Plan My Trip</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>TRAVEL NOW, PAY LATER</h1>
+    <p>Book today. Pay in flexible monthly installments.</p>
+    <a href="#destinations" class="btn-large">Start Your Journey</a>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="steps">
+    <h2>How It Works</h2>
+    <div class="step-container">
+      <div class="step">
+        <span>1</span>
+        <p>Pick your destination</p>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <p>Choose a payment plan</p>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <p>Pack your bags & go!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Deals -->
+  <section id="destinations" class="deals">
+    <h2>Popular Deals</h2>
+    <div class="deal-cards">
+      <div class="card">
+        <img src="paris.jpg" alt="Paris">
+        <h3>Paris</h3>
+        <p>From $65/month</p>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+      <div class="card">
+        <img src="newyork.jpg" alt="New York">
+        <h3>New York</h3>
+        <p>From $85/month</p>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+      <div class="card">
+        <img src="bali.jpg" alt="Bali">
+        <h3>Bali</h3>
+        <p>From $65/month</p>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TNPL Travel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ddd;
+}
+header .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #222;
+}
+nav .btn {
+  background: #0d2a63;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+  background: url('beach.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn-large {
+  background: #0d2a63;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Steps */
+.steps {
+  padding: 50px 20px;
+  text-align: center;
+}
+.step-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+.step span {
+  display: inline-block;
+  background: #0d2a63;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Deals */
+.deals {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+.deal-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.card h3 {
+  margin: 10px 0;
+}
+.card p {
+  margin-bottom: 15px;
+}
+.btn {
+  display: inline-block;
+  background: #0d2a63;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d2a63;
+  color: white;
+  margin-top: 30px;
+}
