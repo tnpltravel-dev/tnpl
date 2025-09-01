@@ -38,7 +38,7 @@ header nav a.btn {
 
 /* Hero section */
 .hero {
-  background: url('BeachJPG') center/cover no-repeat;
+  background: url('Beach.JPG') center/cover no-repeat;
   color: darkblue;
   text-align: center;
   padding: 120px 20px;
@@ -55,7 +55,7 @@ header nav a.btn {
 }
 
 .btn-large {
-  background: #ff6600;
+  background: darkblue;
   color: white;
   padding: 12px 25px;
   border-radius: 6px;
