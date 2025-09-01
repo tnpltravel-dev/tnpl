@@ -28,6 +28,37 @@ header .logo {
   border-radius: 50%;   /* makes it round */
   object-fit: cover;    /* crops extra space inside */
 }
+header {
+  display: flex;
+  justify-content: space-between; /* logo left, CTA right */
+  align-items: center;
+  padding: 15px 50px;
+  background: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between heading and button */
+}
+
+.header-cta h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #001F5B; /* dark blue for your theme */
+}
+
+.btn-large {
+  background: #001F5B;  /* dark blue */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+}
 nav a {
   margin: 0 10px;
   text-decoration: none;
