@@ -74,7 +74,7 @@ nav .btn {
 /* Hero */
 .hero {
   background: url('beach.jpg') center/cover no-repeat;
-  color: white;
+  color: darkbleu;
   text-align: center;
   padding: 100px 20px;
 }
@@ -122,6 +122,7 @@ nav .btn {
   padding: 50px 20px;
   text-align: center;
   background: #f9f9f9;
+  color: darkbleu;
 }
 .deal-cards {
   display: flex;
