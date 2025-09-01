@@ -67,7 +67,8 @@ header nav a.btn {
 .steps {
   padding: 60px 20px;
   text-align: center;
-  background: #f5f5f5;
+  background: darkbleu;
+  color: white;
 }
 
 .steps h2 {
@@ -79,12 +80,15 @@ header nav a.btn {
   display: flex;
   justify-content: center;
   gap: 40px;
+  background: darkbleu;
+  color: white;
 }
 
 .step span {
   display: block;
   font-size: 30px;
-  color: #ff6600;
+  background: darkbleu;
+  color: white;
   margin-bottom: 10px;
 }
 
