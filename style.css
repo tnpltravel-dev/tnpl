@@ -9,7 +9,7 @@
 /* Navbar */
 header {
   background: white;
-  color: white;
+  color: darkblue;
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
@@ -31,9 +31,11 @@ header nav a {
 }
 
 header nav a.btn {
-  background: darkbleu;
+  background: darkblue;
   padding: 8px 15px;
   border-radius: 5px;
+  color: white;
+  text-decoration: none;
 }
 
 /* Hero section */
@@ -124,7 +126,7 @@ header nav a.btn {
 }
 
 .card .btn {
-  background: #ff6600;
+  background: darkblue;
   color: white;
   padding: 8px 15px;
   border-radius: 5px;
