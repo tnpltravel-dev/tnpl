@@ -151,3 +151,9 @@ footer {
   color: white;
   margin-top: 30px;
 }
+/* Button container for right alignment */
+.button-container {
+  display: flex;
+  justify-content: flex-end;  /* aligns the button to the right */
+  margin-top: 20px;           /* spacing from the heading */
+}
