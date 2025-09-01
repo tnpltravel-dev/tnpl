@@ -26,7 +26,7 @@ header .logo {
 header nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: black;
+  color: darkblue;
   font-weight: 500;
 }
 
@@ -39,7 +39,7 @@ header nav a.btn {
 /* Hero section */
 .hero {
   background: url('BeachJPG') center/cover no-repeat;
-  color: black;
+  color: darkblue;
   text-align: center;
   padding: 120px 20px;
 }
