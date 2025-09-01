@@ -21,9 +21,12 @@ header {
   top: 0;
   border-bottom: 1px solid #ddd;
 }
-header ..logo {
-  width: 120px;   /* try 80px, 100px, 150px until it looks right */
-  height: auto;   /* keeps proportions */
+/* Logo */
+header .logo {
+  width: 80px;          /* adjust size: try 80px–100px */
+  height: 80px;         /* equal width & height for circle */
+  border-radius: 50%;   /* makes it round */
+  object-fit: cover;    /* crops extra space inside */
 }
 nav a {
   margin: 0 10px;
