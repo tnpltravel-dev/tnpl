@@ -21,9 +21,9 @@ header {
   top: 0;
   border-bottom: 1px solid #ddd;
 }
-header .logo {
-  font-weight: bold;
-  font-size: 20px;
+header ..logo {
+  width: 120px;   /* try 80px, 100px, 150px until it looks right */
+  height: auto;   /* keeps proportions */
 }
 nav a {
   margin: 0 10px;
