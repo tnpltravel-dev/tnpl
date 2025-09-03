@@ -129,26 +129,23 @@
   <!-- Popup Container -->
 <div id="popup" class="popup">
   <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2> Launch Day is Coming!</h2>
+    <h2>Launch Day is Coming!</h2>
     <p>Join the waitlist to get notified first.</p>
 
-    <!-- Form sends data to Google Sheet via Apps Script -->
-    <form id="waitlistForm" 
-          action="https://script.google.com/macros/s/AKfycbw406mRWwt4-5mtLSOsth2ZE8JKE1mLedBlPMQfHDXI/dev" 
-          method="post" 
-          target="hidden_iframe">
+    <form id="waitlistForm" action="YOUR_WEB_APP_URL" method="post" target="hidden_iframe">
       <input type="text" name="name" placeholder="Your Name" required><br>
       <input type="email" name="email" placeholder="Your Email" required><br>
       <button type="submit">Sign Up</button>
     </form>
 
-    <!-- Hidden iframe prevents page reload -->
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-    <p id="formMessage" style="display:none; color:green; margin-top:10px;">✅ Thank you! You’re on the waitlist.</p>
-  </div>
-</div>
+    <p id="formMessage" style="display:none; color:green; margin-top:10px;">
+      ✅ Thank you! You're on the waitlist.
+    </p>
+
+  </div> <!-- popup-content ends here -->
+</div> <!-- popup ends here -->
 
 <!-- Styles -->
 <style>
