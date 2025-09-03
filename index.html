@@ -130,17 +130,27 @@
 <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2>🚀 Launch Day is Coming!</h2>
+    <h2> Launch Day is Coming!</h2>
     <p>Join the waitlist to get notified first.</p>
-    <form id="waitlistForm" action="https://script.google.com/macros/s/AKfycbyFrLONatg3vSztW6hrbf53pxL6Pn7NfdmE1lXIKzwPfP1x7u_tbNXwBkzzTm3sEuYHGA/exec" method="post">
+
+    <!-- Form sends data to Google Sheet via Apps Script -->
+    <form id="waitlistForm" 
+          action="https://script.google.com/macros/s/AKfycbyFrLONatg3vSztW6hrbf53pxL6Pn7NfdmE1lXIKzwPfP1x7u_tbNXwBkzzTm3sEuYHGA/exec" 
+          method="post" 
+          target="hidden_iframe">
       <input type="text" name="name" placeholder="Your Name" required><br>
       <input type="email" name="email" placeholder="Your Email" required><br>
       <button type="submit">Sign Up</button>
     </form>
+
+    <!-- Hidden iframe prevents page reload -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
     <p id="formMessage" style="display:none; color:green; margin-top:10px;">✅ Thank you! You’re on the waitlist.</p>
   </div>
 </div>
 
+<!-- Styles -->
 <style>
 .popup {
   display: none;
@@ -186,6 +196,7 @@ button:hover {
 }
 </style>
 
+<!-- Script -->
 <script>
 window.onload = function() {
   document.getElementById("popup").style.display = "block";
@@ -195,25 +206,10 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-document.getElementById("waitlistForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let formData = {
-    name: e.target.name.value,
-    email: e.target.email.value
-  };
-
-  fetch(e.target.action, {
-    method: "POST",
-    body: JSON.stringify(formData),
-    headers: { "Content-Type": "application/json" }
-  })
-  .then(response => response.text())
-  .then(result => {
-    document.getElementById("formMessage").style.display = "block";
-    e.target.reset();
-  })
-  .catch(error => console.error("Error:", error));
-});
+// Show thank-you message and close popup on form submit
+document.getElementById('waitlistForm').onsubmit = function() {
+  document.getElementById('formMessage').style.display = 'block';
+  document.getElementById('popup').style.display = 'none';
+};
 </script>
 </html>
