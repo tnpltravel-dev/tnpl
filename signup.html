@@ -2,9 +2,9 @@
 <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2>🚀 Launch Day is Approaching!</h2>
+    <h2>🚀 Launch Day is Coming!</h2>
     <p>Join the waitlist to get notified first.</p>
-    <form id="waitlistForm">
+    <form id="waitlistForm" action="https://script.google.com/macros/s/AKfycbyFrLONatg3vSztW6hrbf53pxL6Pn7NfdmE1lXIKzwPfP1x7u_tbNXwBkzzTm3sEuYHGA/exec" method="post">
       <input type="text" name="name" placeholder="Your Name" required><br>
       <input type="email" name="email" placeholder="Your Email" required><br>
       <button type="submit">Sign Up</button>
@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<!-- Popup Styles -->
+<!-- Styles -->
 <style>
 .popup {
   display: none;
@@ -59,7 +59,7 @@ button:hover {
 }
 </style>
 
-<!-- Popup Script -->
+<!-- Script -->
 <script>
 window.onload = function() {
   document.getElementById("popup").style.display = "block";
@@ -69,19 +69,24 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-// Handle Form Submission
 document.getElementById("waitlistForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  // Grab values
-  let name = e.target.name.value;
-  let email = e.target.email.value;
+  let formData = {
+    name: e.target.name.value,
+    email: e.target.email.value
+  };
 
-  // TODO: Send to your backend or Google Sheet
-  console.log("Name:", name, "Email:", email);
-
-  // Show success message
-  document.getElementById("formMessage").style.display = "block";
-  e.target.reset();
+  fetch(e.target.action, {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(response => response.text())
+  .then(result => {
+    document.getElementById("formMessage").style.display = "block";
+    e.target.reset();
+  })
+  .catch(error => console.error("Error:", error));
 });
 </script>
