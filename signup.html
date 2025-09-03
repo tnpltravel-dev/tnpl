@@ -1,0 +1,87 @@
+<!-- Popup Container -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>🚀 Launch Day is Approaching!</h2>
+    <p>Join the waitlist to get notified first.</p>
+    <form id="waitlistForm">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="formMessage" style="display:none; color:green; margin-top:10px;">✅ Thank you! You’re on the waitlist.</p>
+  </div>
+</div>
+
+<!-- Popup Styles -->
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.popup-content {
+  background: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  text-align: center;
+}
+.close-btn {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+input {
+  width: 90%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+button:hover {
+  background: #005bb5;
+}
+</style>
+
+<!-- Popup Script -->
+<script>
+window.onload = function() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+// Handle Form Submission
+document.getElementById("waitlistForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Grab values
+  let name = e.target.name.value;
+  let email = e.target.email.value;
+
+  // TODO: Send to your backend or Google Sheet
+  console.log("Name:", name, "Email:", email);
+
+  // Show success message
+  document.getElementById("formMessage").style.display = "block";
+  e.target.reset();
+});
+</script>
