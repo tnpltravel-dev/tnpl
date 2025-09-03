@@ -226,7 +226,7 @@ footer .footer-link:hover {
 }
 
 .trust-item {
-  background: white;
+  background: darkbleu;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -236,11 +236,11 @@ footer .footer-link:hover {
 .trust-item h3 {
   margin-top: 10px;
   font-size: 18px;
-  color: #222;
+  color: white;
 }
 
 .trust-item p {
   font-size: 14px;
-  color: #666;
+  color: white;
   margin-top: 5px;
 }
